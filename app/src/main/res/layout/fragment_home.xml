@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_slider" />
+
+                    <include layout="@layout/shimmer_layout" />
+
+                    <include layout="@layout/shimmer_layout" />
+
+                    <include layout="@layout/shimmer_layout" />
+
+                    <include layout="@layout/shimmer_layout" />
+
+                    <include layout="@layout/shimmer_layout" />
+
+                    <include layout="@layout/shimmer_layout" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHelloHomeFragment"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="left"
+                    android:text="Hello" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpgHomeSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_br" />
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/homeCircleIndicatior"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle0"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault0"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle1"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault1"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle2"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault2"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle3"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault3"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle4"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault4"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle5"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault5"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+
+                <TextView
+                    android:id="@+id/tvContentTittle6"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault6"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_margin="5dp" />
+                <TextView
+                    android:id="@+id/tvContentTittle7"
+                    style="@style/title_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textSize="20sp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPlayListDefault7"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

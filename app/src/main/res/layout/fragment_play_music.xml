@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:id="@+id/toolbarPlayMusicFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btnBack"
+            style="@style/img_button_toolbar"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_arrow" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btnAddPlayList"
+            style="@style/img_button_toolbar"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_add_playlist" />
+    </RelativeLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpgSongInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.3" />
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="horizontal"
+        tools:ignore="RtlSymmetry">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:iconSize="25dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_alignParentStart="true"
+            app:icon="@drawable/ic_share" />
+
+        <TextView
+            android:id="@+id/tvSumLike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/btnLikeSong"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:backgroundTint="@android:color/transparent"
+            android:id="@+id/btnLikeSong"
+            app:iconSize="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_like"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/timeSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="0.5"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:defaultFocusHighlightEnabled="true"
+        android:max="1000"
+        android:maxHeight="5dp"
+        android:progressDrawable="@drawable/br_seek_bar"
+        android:thumb="@null" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTimeStart"
+            style="@style/title_Login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="@string/defaultDuration"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvTimeEnd"
+            style="@style/title_Login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="@string/defaultDuration"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShuffle"
+            style="@style/img_button_media_player"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:icon="@drawable/ic_shuffle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPrev"
+            style="@style/img_button_media_player"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:icon="@drawable/ic_prev" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnPlay_Pause"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/custom_image_button_cycle"
+            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:src="@drawable/ic_play"
+            tools:ignore="NestedWeights" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            style="@style/img_button_media_player"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:icon="@drawable/ic_next" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRepeatMode"
+            style="@style/img_button_media_player"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:icon="@drawable/ic_not_repeat" />
+    </LinearLayout>
+</LinearLayout>
